@@ -7,7 +7,7 @@ var samples =[
             "start":"2:01am",
             "end":"2:10am",
             "values":["85/55", null, null, "95.2"],
-            "message": "General: She is a well-nourished, well-developed, elderly white female in no acute distress. She appears somewhat sad and tearful. HEENT: Tympanic membranes are clear bilaterally. Nose has some pale mucosa, otherwise clear.She has tenderness along the left maxillary and left preauricular areas, and some mild temporomandibular joint tenderness. Throat is clear. Neck is supple."
+            "message": "General: She is a well-nourished, well-developed, elderly white female in no acute distress. She appears somewhat sad and tearful."
         },
         {
             "start":"2:11am",
@@ -37,7 +37,7 @@ var samples =[
             "start":"5:01am",
             "end":"5:10am",
             "values":["85/55", null, "90", "95.2"],
-            "message": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "message": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
         },
         {
             "start":"6:01am",
@@ -55,19 +55,19 @@ var samples =[
             "start":"8:01am",
             "end":"8:10am",
             "values":[null, null, null, "95.2"],
-            "message": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. "
+            "message": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. "
         },
         {
             "start":"9:01am",
             "end":"9:10am",
             "values":["85/55", "44", null, "88"],
-            "message": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+            "message": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
         },
         {
             "start":"10:01am",
             "end":"10:10am",
             "values":["85/55", null, "98", "90"],
-            "message": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio."
+            "message": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
         },
         {
             "start":"11:01am",
@@ -88,9 +88,8 @@ var samples =[
 var main = function(){
 
     $(".ui-block-a").css("height", window.innerHeight);
-
     $(".frame").css("height", window.innerHeight);
-    $(".frame").css("width", window.innerWidth);
+    $(".frame").css("width", window.innerWidth - window.innerWidth*0.2);
 
 
 
@@ -156,6 +155,8 @@ var main = function(){
 
         $(".frame").append(sample_div)
     });
+
+    $(".frame").scrollLeft($(".frame").width() +400);
 
     $(".nurse-text").off().on("keydown", function(event){
         event.preventDefault();
