@@ -8,10 +8,19 @@ $(function() {
 });
 
 var start = function () {
-    clinicalEvents.forEach(function (c, i) {
-        renderReport(c, i);
+
+    var param = getUrlVars()["ids"];
+
+    var params = parseParams(param);
+
+    console.log('params: ' + params);
+    params.forEach(function (clinicalEventIndex, i) {
+        if(clinicalEventIndex<clinicalEvents.length)
+            renderReport(clinicalEvents[clinicalEventIndex], i);
     });
 
+
+    $('.header').on('click', function(){window.history.back()});
 };
 
 var renderReport = function (clinicalEvent, i) {
@@ -64,7 +73,6 @@ var renderReport = function (clinicalEvent, i) {
         tds.push(column);
     });
 
-    console.log(tds);
 
     // Create rows
     var rows = [];
@@ -123,4 +131,23 @@ var openReport = function(id){
     $('.report-center').hide();
     $('.report-bottom').hide();
     $('.'+id).fadeIn();
+};
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+var parseParams = function(param){
+    if(param == undefined)
+        return [];
+    var params = param.split(',');
+    var intParams = [];
+    params.forEach(function (s) {
+        intParams.push(parseInt(s))
+    });
+    return intParams;
 };
