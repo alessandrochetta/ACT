@@ -114,5 +114,13 @@ var renderReport = function (clinicalEvent, i) {
 };
 
 var openReport = function(id){
+    if($('.'+id).css('display') == 'block')
+    {
+        $('.'+id).hide();
+        return
+    }
+    $('.causes').hide();
+    $('.report-center').hide();
+    $('.report-bottom').hide();
     $('.'+id).fadeIn();
 };
