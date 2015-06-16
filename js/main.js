@@ -64,7 +64,12 @@ var plot_chart = function(){
 
     data.forEach(function (d, i) {
         var current_group = svg.append('g')
-            .attr("transform", "translate(" +( start_x_position + style.graph.bar_right_margin*i + style.graph.bar_width*i)+ "," + ( window.innerHeight/2 + window.innerHeight * style.graph.margin_top) + ")");
+            .attr("transform", "translate(" +( start_x_position + style.graph.bar_right_margin*i + style.graph.bar_width*i)+ "," + ( window.innerHeight/2 + window.innerHeight * style.graph.margin_top) + ")")
+            .on('click', function(diseases){
+                return function(){
+                    window.location.href = '../ML-report/index.html?ids=' + diseases.toString();
+                }
+            }(d.clinical_events));
         new Bar(d, current_group);
     });
 };
