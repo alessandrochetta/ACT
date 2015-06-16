@@ -10,7 +10,6 @@ div.header{
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 50px;
-    border-bottom: solid 1px #D2D7D3;
     background: url("../img/arrow4132.svg") no-repeat left;
     cursor: pointer;
 }
@@ -25,10 +24,11 @@ div.causes{
 
 div.title{
     font-size: 20pt;
+    cursor: pointer;
 }
 
 div.report-header{
-    border-bottom: solid 1px #D2D7D3;
+    border-top: solid 1px #D2D7D3;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
@@ -36,7 +36,7 @@ div.report-header{
 }
 
 div.report-center{
-    border-bottom: solid 1px #D2D7D3;
+    border-top: solid 1px #D2D7D3;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
@@ -44,6 +44,7 @@ div.report-center{
 }
 
 div.report-bottom{
+    border-top: solid 1px #D2D7D3;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
