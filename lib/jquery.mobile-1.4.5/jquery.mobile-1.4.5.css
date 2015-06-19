@@ -4099,9 +4099,9 @@ textarea.ui-input-text {
 	line-height: 1.4em;
 	display: block;
 	width: 100%;
-	/*-webkit-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;*/
+	box-sizing: border-box;
 
 	outline: 0;
 }
@@ -4117,9 +4117,10 @@ textarea.ui-input-text {
 	border-radius: inherit;
 }
 textarea.ui-input-text {
-	/*overflow: auto;
-	resize: vertical;*/
+	overflow: auto;
+	resize: vertical;
 }
+
 .ui-mini .ui-input-text input,
 .ui-mini .ui-input-search input,
 .ui-input-text.ui-mini input,
@@ -4211,7 +4212,7 @@ for Android 4.1 */
 	box-shadow: none;
 }
 textarea.ui-input-text.ui-textinput-autogrow {
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 .ui-textinput-autogrow-resize {
 	-webkit-transition: height 0.25s;
