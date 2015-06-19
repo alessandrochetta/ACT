@@ -61,6 +61,17 @@ textarea.nurse-text-editable{
     text-align:center;
 }
 
+.input-field-label{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    height: 25px;
+    border: none;
+    text-align:center;
+}
+
 .submit-button{
     width: 100%;
     height: 20px;
