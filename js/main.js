@@ -370,6 +370,7 @@ var append_new_sample = function(start, end, values, message, i){
 
     var textarea = $(document.createElement('textarea'))
         .addClass('nurse-text-editable')
+        .attr("id", "message-"+i)
         .css("height", window.innerHeight*0.35)
         .html(message)
         .on("click", function(){
@@ -580,7 +581,7 @@ var append_new_sample_form = function(){
 
     scroll_right();
 };
-
+/*
 var add_sample = function () {
     var shift_time_start;
     var shift_time_end;
@@ -603,6 +604,33 @@ var add_sample = function () {
     append_new_sample_form();
     scroll_right();
     return false;
+};*/
+
+var add_sample = function () {
+    var shift_time_start;
+    var shift_time_end;
+    var values = [];
+    var message;
+
+    shift_time_start = $("#shift_time_start").val();
+    shift_time_end = $("#shift_time_end").val();
+
+    labels.forEach(function (value) {
+        values.push($("#" + value).val())
+    });
+
+    message  = $("#message").val();
+
+    var new_sample = {};
+    new_sample.start = shift_time_start;
+    new_sample.end = shift_time_end;
+    new_sample.values = values;
+    new_sample.message = message;
+
+    samples.push(new_sample);
+
+    refresh();
+    return false;
 };
 
 var show_edit_button = function(id){
@@ -616,6 +644,27 @@ var show_edit_button = function(id){
 
 var edit_report = function(id){
     $("#edit-button-"+id).hide();
+    var shift_time_start;
+    var shift_time_end;
+    var values = [];
+    var message;
+
+    shift_time_start = $("#shift_time_start_edit-"+id).val();
+    shift_time_end = $("#shift_time_end_edit-"+id).val();
+
+    labels.forEach(function (value) {
+        values.push($("#" + value + '-' + id).val())
+    });
+
+    message  = $("#message-"+id).val();
+
+    var sample_to_edit = samples[id];
+    sample_to_edit.end = shift_time_end;
+    sample_to_edit.start = shift_time_start;
+    sample_to_edit.values = values;
+    sample_to_edit.message = message;
+
+    refresh();
 };
 
 var show_add_button = function(){
