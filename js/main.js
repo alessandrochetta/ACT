@@ -2,7 +2,6 @@
  * Created by alessandro on 5/25/15.
  */
 
-
 /**
  *
  * TODO aggiungere righe, aggiungere editabilità dei vecchi records
@@ -236,10 +235,11 @@ var generate_left_bar = function(){
             .addClass('sample-label');
 
         var input = $(document.createElement('input'))
-            .attr("class", "input-field")
+            .attr("class", "input-field-label")
             .attr("value", l)
             .attr("id","label-"+l)
-            .attr("name", "label-"+l);
+            .attr("name", "label-"+l)
+            .attr("type", "text");
 
         sample_label_div.append(input);
         parameter_div.append(sample_label_div);
@@ -253,6 +253,7 @@ var generate_left_bar = function(){
         .attr("placeholder", "New Field")
         .attr("id","new-field")
         .attr("name", "new-field")
+        .css("width","100%")
         .on("click", function(){ return show_add_button()});
 
     sample_label_div.append(input);
