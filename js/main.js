@@ -14,7 +14,6 @@ var labels = [
     "Temp"
 ];
 
-
 var previous_sample_hidden = false;
 var previous_sample_hidden_id = 0;
 var last_sample_id = 0;
