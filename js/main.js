@@ -55,6 +55,8 @@ var renderReport = function (clinicalEvent, i) {
         .attr("class", "report-center " + 'ce'+i)
         //.attr('class', 'ce'+i)
         .css('display', 'none');
+
+    /*
     var table = $(document.createElement('table'));
     var tds = [];
     clinicalEvent.values.forEach(function (v) {
@@ -73,7 +75,6 @@ var renderReport = function (clinicalEvent, i) {
         tds.push(column);
     });
 
-
     // Create rows
     var rows = [];
     tds[0].forEach(function () {
@@ -90,6 +91,46 @@ var renderReport = function (clinicalEvent, i) {
     rows.forEach(function (tr) {
         table.append(tr);
     });
+    */
+
+    var table = $(document.createElement('table'));
+    var trs = [];
+    // Empty labelTd to make space to the dates
+    var labelTd = $(document.createElement('td'))
+        .html('');
+    var row = $(document.createElement('tr')).append(labelTd);
+    trs.push(row);
+    table.append(row);
+    // Create tr and td for the labels
+    labels.forEach(function(rowLabel){
+        var labelTd = $(document.createElement('td'))
+            .html(rowLabel);
+        var row = $(document.createElement('tr')).append(labelTd);
+        trs.push(row);
+        table.append(row)
+    });
+
+    clinicalEvent.values.forEach(function(value){
+        var dataIndex = value.reportIndex;
+        var tableData = samples[dataIndex];
+        var datelTd = $(document.createElement('td'))
+            .html(tableData.start + ' - ' + tableData.end);
+        trs[0].append(datelTd);
+        tableData.values.forEach(function (v, i) {
+            var labelTd = $(document.createElement('td'));
+            if(value.classes[i] != null) {
+                var span = $(document.createElement('span'))
+                    .css("color", color(value.classes[i]))
+                    .html(v);
+                labelTd.append(span)
+            }
+            else{
+                labelTd.html(v);
+
+            }
+            trs[i+1].append(labelTd)
+        });
+    });
 
     reportCenterDiv.append(table);
 
@@ -101,6 +142,7 @@ var renderReport = function (clinicalEvent, i) {
 
     var messageDiv = $(document.createElement('div')).attr("class", "message");
 
+    /* Previous implementation
     clinicalEvent.text.forEach(function (t) {
         if(t.class == null)
             messageDiv.append(t.string);
@@ -110,6 +152,25 @@ var renderReport = function (clinicalEvent, i) {
                 .html(t.string);
             messageDiv.append(span);
         }
+    }); */
+
+    clinicalEvent.texts.forEach(function (t) {
+        var text = samples[t.reportIndex].message;
+        messageDiv.append(samples[t.reportIndex].start + ' - ' + samples[t.reportIndex].end + '<br>');
+        var i = 0;
+        t.classes.forEach(function (c) {
+            for(; i < c.startCharacter; i++)
+                messageDiv.append(text[i])
+            var span = $(document.createElement('span'))
+                .css("color", color(c.class));
+            for(j=c.startCharacter; j <= c.endCharacter; j++)
+                span.append(text[j])
+            messageDiv.append(span);
+            i = j
+        });
+        for(; i < text.length; i++)
+            messageDiv.append(text[i])
+        messageDiv.append('<br><br>');
     });
 
     reportBottomDiv.append(messageDiv);

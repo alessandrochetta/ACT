@@ -1,7 +1,7 @@
 /**
  * Created by alessandro on 6/9/15.
  */
-
+/* Previous representation
 var clinicalEvents = [
 
     {
@@ -1463,4 +1463,88 @@ var clinicalEvents = [
             ]
         }
 ]
-;
+;*/
+
+var clinicalEvents = [
+
+        {
+            "name": "Thrombosis",
+            "probability": 32,
+            "causes":[
+                {
+                    "class": 2,
+                    "name": "high variability of heartbeat"
+                },
+                {
+                    "class": 3,
+                    "name": "low blood pressure"
+                },
+                {
+                    "class": 1,
+                    "name": "insomnia"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [1, null, null, 4]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [1, 2, null, 4]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [1, null, 3, 4]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 9,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 25,
+                            "endCharacter": 40
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 64,
+                            "endCharacter": 77
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 100,
+                            "endCharacter": 121
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 51,
+                            "endCharacter": 73
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 89,
+                            "endCharacter": 95
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+    ;
