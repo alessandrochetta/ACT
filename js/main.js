@@ -15,29 +15,29 @@ var start = function () {
 
     console.log('params: ' + params);
     params.forEach(function (clinicalEventIndex, i) {
-        if(clinicalEventIndex<clinicalEvents.length)
-            renderReport(clinicalEvents[clinicalEventIndex], i);
+        if(clinicalEventIndex<MLReports.length)
+            renderReport(MLReports[clinicalEventIndex], i);
     });
 
 
     $('.header').on('click', function(){window.history.back()});
 };
 
-var renderReport = function (clinicalEvent, i) {
+var renderReport = function (MLReports, i) {
     var reportDiv = $(document.createElement('div')).attr("class", "report");
 
     // Report Header
     var reportHeaderDiv = $(document.createElement('div')).attr("class", "report-header");
     var titleDiv = $(document.createElement('div'))
         .attr("class", "title")
-        .html(clinicalEvent.name + ' (' + clinicalEvent.probability + '%)')
+        .html(clinicalEvents[MLReports.clinicalEventIndex] + ' (' + MLReports.probability + '%)')
         .on('click', function (id) {
             return function(){
                 openReport(id)
             }
         }('ce'+i));
     reportHeaderDiv.append(titleDiv);
-    clinicalEvent.causes.forEach(function (c) {
+    MLReports.causes.forEach(function (c) {
         var causeDiv = $(document.createElement('div'))
             .attr("class", "causes " + 'ce'+i)
             .html('- ')
@@ -110,7 +110,7 @@ var renderReport = function (clinicalEvent, i) {
         table.append(row)
     });
 
-    clinicalEvent.values.forEach(function(value){
+    MLReports.values.forEach(function(value){
         var dataIndex = value.reportIndex;
         var tableData = samples[dataIndex];
         var datelTd = $(document.createElement('td'))
@@ -154,7 +154,7 @@ var renderReport = function (clinicalEvent, i) {
         }
     }); */
 
-    clinicalEvent.texts.forEach(function (t) {
+    MLReports.texts.forEach(function (t) {
         var text = samples[t.reportIndex].message;
         messageDiv.append(samples[t.reportIndex].start + ' - ' + samples[t.reportIndex].end + '<br>');
         var i = 0;
@@ -163,7 +163,7 @@ var renderReport = function (clinicalEvent, i) {
                 messageDiv.append(text[i])
             var span = $(document.createElement('span'))
                 .css("color", color(c.class));
-            for(j=c.startCharacter; j <= c.endCharacter; j++)
+            for(var j=i; j <= c.endCharacter; j++)
                 span.append(text[j])
             messageDiv.append(span);
             i = j

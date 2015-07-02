@@ -2,7 +2,7 @@
  * Created by alessandro on 6/9/15.
  */
 /* Previous representation
-var clinicalEvents = [
+var MLReports = [
 
     {
         "name": "Thrombosis",
@@ -1465,10 +1465,10 @@ var clinicalEvents = [
 ]
 ;*/
 
-var clinicalEvents = [
+var MLReports = [
 
         {
-            "name": "Thrombosis",
+            "clinicalEventIndex": 0,
             "probability": 32,
             "causes":[
                 {
@@ -1541,6 +1541,1813 @@ var clinicalEvents = [
                             "class": 4,
                             "startCharacter": 89,
                             "endCharacter": 95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 0,
+            "probability": 82,
+            "causes":[
+                {
+                    "class": 2,
+                    "name": "event1"
+                },
+                {
+                    "class": 3,
+                    "name": "event2"
+                },
+                {
+                    "class": 1,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [1, 2, null, 4]
+                },
+                {
+                    "reportIndex":2,
+                    "classes": [1, 2, 3, 4]
+                },
+                {
+                    "reportIndex":3,
+                    "classes": [1, 2, 3, 4]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 9,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 25,
+                            "endCharacter": 40
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 64,
+                            "endCharacter": 77
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 100,
+                            "endCharacter": 121
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 51,
+                            "endCharacter": 73
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 89,
+                            "endCharacter": 95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 1,
+            "probability": 22,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":5,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [4, 2, 1, 3]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 8,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 65
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 63,
+                            "endCharacter": 84
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 98,
+                            "endCharacter": 126
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 0,
+                            "endCharacter": 5
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 62
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 87,
+                            "endCharacter": 92
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 1,
+            "probability": 88,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":5,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [4, 2, 1, 3]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 8,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 65
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 63,
+                            "endCharacter": 84
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 98,
+                            "endCharacter": 126
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 0,
+                            "endCharacter": 5
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 62
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 87,
+                            "endCharacter": 92
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 2,
+            "probability": 38,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 4,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 3,
+                    "name": "event4"
+                },
+                {
+                    "class": 5,
+                    "name": "event5"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":6,
+                    "classes": [4, 2, 1, 4]
+                },
+                {
+                    "reportIndex":9,
+                    "classes": [4, 2, 1, 4]
+                },
+                {
+                    "reportIndex":10,
+                    "classes": [4, 2, 1, 5]
+                },
+                {
+                    "reportIndex":11,
+                    "classes": [4, 2, 1, 5]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 7,
+                            "endCharacter": 23
+                        },
+                        {
+                            "class": 3,
+                            "startCharacter": 25,
+                            "endCharacter": 73
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":9,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 60,
+                            "endCharacter": 88
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 98,
+                            "endCharacter": 131
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":10,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 0,
+                            "endCharacter": 6
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 25,
+                            "endCharacter": 62
+                        },
+                        {
+                            "class": 5,
+                            "startCharacter": 86,
+                            "endCharacter": 95
+                        }
+                    ]
+                }
+                ,
+                {
+                    "reportIndex":11,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 24,
+                            "endCharacter": 55
+                        },
+                        {
+                            "class": 5,
+                            "startCharacter": 87,
+                            "endCharacter": 100
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 2,
+            "probability": 98,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 4,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 3,
+                    "name": "event4"
+                },
+                {
+                    "class": 5,
+                    "name": "event5"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":6,
+                    "classes": [4, 2, 1, 4]
+                },
+                {
+                    "reportIndex":9,
+                    "classes": [4, 2, 1, 4]
+                },
+                {
+                    "reportIndex":10,
+                    "classes": [4, 2, 1, 5]
+                },
+                {
+                    "reportIndex":11,
+                    "classes": [4, 2, 1, 5]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 7,
+                            "endCharacter": 23
+                        },
+                        {
+                            "class": 3,
+                            "startCharacter": 25,
+                            "endCharacter": 73
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":9,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 60,
+                            "endCharacter": 88
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 98,
+                            "endCharacter": 131
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":10,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 0,
+                            "endCharacter": 6
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 25,
+                            "endCharacter": 62
+                        },
+                        {
+                            "class": 5,
+                            "startCharacter": 86,
+                            "endCharacter": 95
+                        }
+                    ]
+                }
+                ,
+                {
+                    "reportIndex":11,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 24,
+                            "endCharacter": 55
+                        },
+                        {
+                            "class": 5,
+                            "startCharacter": 87,
+                            "endCharacter": 100
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 3,
+            "probability": 25,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":6,
+                    "classes": [1, 2, 1, null]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [1, 2, 1, null]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 7,
+                            "endCharacter": 23
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 54,
+                            "endCharacter": 91
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 3,
+            "probability": 99,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":6,
+                    "classes": [1, 2, 1, null]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [1, 2, 1, null]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 7,
+                            "endCharacter": 23
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 54,
+                            "endCharacter": 91
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 4,
+            "probability": 10,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":6,
+                    "classes": [1, 2, 1, 2]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [1, 2, 1, 2]
+                }
+                ,
+                {
+                    "reportIndex":12,
+                    "classes": [1, 2, 1, 2]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 20,
+                            "endCharacter": 40
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 38,
+                            "endCharacter": 62
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":12,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 10,
+                            "endCharacter": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 4,
+            "probability": 90,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":6,
+                    "classes": [1, 2, 1, 2]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [1, 2, 1, 2]
+                }
+                ,
+                {
+                    "reportIndex":12,
+                    "classes": [1, 2, 1, 2]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 20,
+                            "endCharacter": 40
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 38,
+                            "endCharacter": 62
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":12,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 10,
+                            "endCharacter": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 5,
+            "probability": 10,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                },
+                {
+                    "class": 5,
+                    "name": "event5"
+                },
+                {
+                    "class": 6,
+                    "name": "event6"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [1, 3, 4, 5]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [1, 3, 4, 5]
+                }
+                ,
+                {
+                    "reportIndex":5,
+                    "classes": [1, 3, 4, 5]
+                }
+                ,
+                {
+                    "reportIndex":6,
+                    "classes": [1, 3, 6, 5]
+                }
+                ,
+                {
+                    "reportIndex":11,
+                    "classes": [1, 3, 6, 5]
+                }
+                ,
+                {
+                    "reportIndex":12,
+                    "classes": [2, 3, 6, 5]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 39
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 39,
+                            "endCharacter": 54
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":11,
+                    "classes": [
+                        {
+                            "class": 5,
+                            "startCharacter": 10,
+                            "endCharacter": 48
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":12,
+                    "classes": [
+                        {
+                            "class": 6,
+                            "startCharacter": 10,
+                            "endCharacter": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 5,
+            "probability": 87,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                },
+                {
+                    "class": 5,
+                    "name": "event5"
+                },
+                {
+                    "class": 6,
+                    "name": "event6"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [1, 3, 4, 5]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [1, 3, 4, 5]
+                }
+                ,
+                {
+                    "reportIndex":5,
+                    "classes": [1, 3, 4, 5]
+                }
+                ,
+                {
+                    "reportIndex":6,
+                    "classes": [1, 3, 6, 5]
+                }
+                ,
+                {
+                    "reportIndex":11,
+                    "classes": [1, 3, 6, 5]
+                }
+                ,
+                {
+                    "reportIndex":12,
+                    "classes": [2, 3, 6, 5]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 39
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 39,
+                            "endCharacter": 54
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":11,
+                    "classes": [
+                        {
+                            "class": 5,
+                            "startCharacter": 10,
+                            "endCharacter": 48
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":12,
+                    "classes": [
+                        {
+                            "class": 6,
+                            "startCharacter": 10,
+                            "endCharacter": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 6,
+            "probability": 15,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                },
+                {
+                    "class": 5,
+                    "name": "event5"
+                },
+                {
+                    "class": 6,
+                    "name": "event6"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [1, 3, 4, 5]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [1, 3, 4, 5]
+                }
+                ,
+                {
+                    "reportIndex":5,
+                    "classes": [1, 3, 4, 5]
+                }
+                ,
+                {
+                    "reportIndex":6,
+                    "classes": [1, 3, 6, 5]
+                }
+                ,
+                {
+                    "reportIndex":11,
+                    "classes": [1, 3, 6, 5]
+                }
+                ,
+                {
+                    "reportIndex":12,
+                    "classes": [2, 3, 6, 5]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 39
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 39,
+                            "endCharacter": 54
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":11,
+                    "classes": [
+                        {
+                            "class": 5,
+                            "startCharacter": 10,
+                            "endCharacter": 48
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":12,
+                    "classes": [
+                        {
+                            "class": 6,
+                            "startCharacter": 10,
+                            "endCharacter": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 6,
+            "probability": 92,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                },
+                {
+                    "class": 5,
+                    "name": "event5"
+                },
+                {
+                    "class": 6,
+                    "name": "event6"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [1, 3, 4, 5]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [1, 3, 4, 5]
+                }
+                ,
+                {
+                    "reportIndex":5,
+                    "classes": [1, 3, 4, 5]
+                }
+                ,
+                {
+                    "reportIndex":6,
+                    "classes": [1, 3, 6, 5]
+                }
+                ,
+                {
+                    "reportIndex":11,
+                    "classes": [1, 3, 6, 5]
+                }
+                ,
+                {
+                    "reportIndex":12,
+                    "classes": [2, 3, 6, 5]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 39
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 39,
+                            "endCharacter": 54
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":11,
+                    "classes": [
+                        {
+                            "class": 5,
+                            "startCharacter": 10,
+                            "endCharacter": 48
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":12,
+                    "classes": [
+                        {
+                            "class": 6,
+                            "startCharacter": 10,
+                            "endCharacter": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 7,
+            "probability": 8,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [1, 3, 2, 4]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [1, 3, 2, 4]
+                }
+                ,
+                {
+                    "reportIndex":5,
+                    "classes": [1, 3, 2, 4]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 39
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 39,
+                            "endCharacter": 54
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 7,
+            "probability": 88,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [1, 3, 2, 4]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [1, 3, 2, 4]
+                }
+                ,
+                {
+                    "reportIndex":5,
+                    "classes": [1, 3, 2, 4]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 39
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 2,
+                            "startCharacter": 39,
+                            "endCharacter": 54
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 7,
+                            "endCharacter": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 8,
+            "probability": 32,
+            "causes":[
+                {
+                    "class": 2,
+                    "name": "high variability of heartbeat"
+                },
+                {
+                    "class": 3,
+                    "name": "low blood pressure"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [2, null, null, 3]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [2, null, null, 3]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [2, null, null, 3]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 9,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 25,
+                            "endCharacter": 40
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 64,
+                            "endCharacter": 77
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 51,
+                            "endCharacter": 73
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 89,
+                            "endCharacter": 95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 8,
+            "probability": 77,
+            "causes":[
+                {
+                    "class": 2,
+                    "name": "high variability of heartbeat"
+                },
+                {
+                    "class": 3,
+                    "name": "low blood pressure"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [2, null, null, 3]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [2, null, null, 3]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [2, null, null, 3]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 9,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 25,
+                            "endCharacter": 40
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 64,
+                            "endCharacter": 77
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 1,
+                            "startCharacter": 51,
+                            "endCharacter": 73
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 89,
+                            "endCharacter": 95
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 9,
+            "probability": 12,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":5,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [4, 2, 1, 3]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 8,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 65
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 63,
+                            "endCharacter": 84
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 98,
+                            "endCharacter": 126
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 0,
+                            "endCharacter": 5
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 62
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 87,
+                            "endCharacter": 92
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 9,
+            "probability": 94,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":5,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [4, 2, 1, 3]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":5,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 8,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 65
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 63,
+                            "endCharacter": 84
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 98,
+                            "endCharacter": 126
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 0,
+                            "endCharacter": 5
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 62
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 87,
+                            "endCharacter": 92
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 10,
+            "probability": 12,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":5,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [4, 2, 1, 3]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 8,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 66
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 63,
+                            "endCharacter": 84
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 98,
+                            "endCharacter": 126
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 0,
+                            "endCharacter": 5
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 62
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 87,
+                            "endCharacter": 92
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "clinicalEventIndex": 10,
+            "probability": 99,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "event1"
+                },
+                {
+                    "class": 2,
+                    "name": "event2"
+                },
+                {
+                    "class": 3,
+                    "name": "event3"
+                },
+                {
+                    "class": 4,
+                    "name": "event4"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":5,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [4, 2, 1, 3]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [4, 2, 1, 3]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
+                    "classes": [
+                        {
+                            "class": 4,
+                            "startCharacter": 8,
+                            "endCharacter": 22
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 66
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":6,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 63,
+                            "endCharacter": 84
+                        },
+                        {
+                            "class": 4,
+                            "startCharacter": 98,
+                            "endCharacter": 126
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":8,
+                    "classes": [
+                        {
+                            "class": 3,
+                            "startCharacter": 0,
+                            "endCharacter": 5
+                        },
+                        {
+                            "class": 1,
+                            "startCharacter": 25,
+                            "endCharacter": 62
+                        },
+                        {
+                            "class": 2,
+                            "startCharacter": 87,
+                            "endCharacter": 92
                         }
                     ]
                 }
