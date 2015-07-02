@@ -2,101 +2,10 @@
  * Created by alessandro on 5/25/15.
  */
 
-
 /**
  *
  * TODO aggiungere righe, aggiungere editabilità dei vecchi records
  */
-
-var samples =[
-        {
-            "start":"2:01am",
-            "end":"2:10am",
-            "values":["85/55", null, null, "95.2"],
-            "message": "General: She is a well-nourished, well-developed, elderly white female in no acute distress. She appears somewhat sad and tearful."
-        },
-        {
-            "start":"2:11am",
-            "end":"2:20am",
-            "values":["87/65", "66", "91", "100.2"],
-            "message": ""
-        },
-        {
-            "start":"2:31am",
-            "end":"2:37am",
-            "values":["75/57", "60", "90", "85.2"],
-            "message": ""
-        },
-        {
-            "start":"3:01am",
-            "end":"3:10am",
-            "values":["88/59", "55", "87", "99.2"],
-            "message": ""
-        },
-        {
-            "start":"4:01am",
-            "end":"4:10am",
-            "values":["95/65", "22", null, "90.2"],
-            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        },
-        {
-            "start":"5:01am",
-            "end":"5:10am",
-            "values":["85/55", null, "90", "95.2"],
-            "message": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-        },
-        {
-            "start":"6:01am",
-            "end":"6:10am",
-            "values":["75/55", "34", "99", "55.72"],
-            "message": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-        },
-        {
-            "start":"7:01am",
-            "end":"7:10am",
-            "values":["85/55", null, null, null],
-            "message": ""
-        },
-        {
-            "start":"8:01am",
-            "end":"8:10am",
-            "values":[null, null, null, "95.2"],
-            "message": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. "
-        },
-        {
-            "start":"9:01am",
-            "end":"9:10am",
-            "values":["85/55", "44", null, "88"],
-            "message": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
-        },
-        {
-            "start":"10:01am",
-            "end":"10:10am",
-            "values":["85/55", null, "98", "90"],
-            "message": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
-        },
-        {
-            "start":"11:01am",
-            "end":"11:10am",
-            "values":["86/50", "39", null, "95.2"],
-            "message": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
-        },
-        {
-            "start":"12:01am",
-            "end":"12:10am",
-            "values":["75/45", null, "78", "105.2"],
-            "message": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae."
-        }
-
-];
-
-var labels = [
-    "BP",
-    "Pulse",
-    "Sats",
-    "Temp"
-];
-
 
 var previous_sample_hidden = false;
 var previous_sample_hidden_id = 0;
@@ -104,6 +13,15 @@ var last_sample_id = 0;
 var number_of_samples = 0;
 
 var main = function(){
+
+    var paramHL = getUrlVars()["highlight"];
+
+    var paramsHL = parseParams(paramHL);
+
+    var paramReportId = getUrlVars()["reportId"];
+    paramReportId = parseParams(paramReportId);
+
+    console.log("highlight " + paramsHL);
 
     $(".ui-block-a").css("height", window.innerHeight);
     $(".frame").css("height", window.innerHeight);
@@ -201,6 +119,20 @@ var main = function(){
      */
     append_new_sample_form();
 
+    console.log(paramReportId);
+    if(paramReportId.length>0)
+        $('.header').on('click', function(){
+            var previousURL = document.referrer.split('&')[0];
+            console.log(previousURL)
+            window.location.href = previousURL + '&reportId=' + paramReportId[0];
+        });
+    else
+        $('.header').on('click', function(){
+            window.history.back()
+        });
+
+    if(paramsHL.length>0)
+        hihghlightSamples(paramsHL)
 };
 
 var refresh = function(){
@@ -282,12 +214,19 @@ var show_collapsed_samples = function(collapsed_class){
         $( ".collapsed_samples_"+collapsed_class ).fadeOut();
 };
 
-
+var show_collapsed_samples_class_param = function(collapsed_class){
+    var display_mode = $( "." + collapsed_class ).css("display");
+    if(display_mode == "none")
+        $( "."+collapsed_class ).show();
+    else
+        $( "."+collapsed_class ).hide();
+};
 
 var append_new_sample = function(start, end, values, message, i){
 
     var sample_div = $(document.createElement('div'))
-        .addClass("sample");
+        .addClass("sample")
+        .attr("id", "sample-"+i);
 
     /*var shift_time_div = $(document.createElement('div'));
     shift_time_div.addClass("shift-time").html(start + " " + end);*/
@@ -405,6 +344,7 @@ var append_new_sample = function(start, end, values, message, i){
     {
 
         sample_div.addClass( 'collapsed_samples_' + previous_sample_hidden_id.toString());
+        sample_div.attr("data-collapsed-group", 'collapsed_samples_' + previous_sample_hidden_id.toString());
         sample_div.hide();
         if(!previous_sample_hidden){
             previous_sample_hidden = true;
@@ -680,4 +620,47 @@ var add_label = function(){
     var new_label = $("#new-field").val();
     labels.push(new_label);
     refresh();
+};
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+var parseParams = function(param){
+    if(param == undefined)
+        return [];
+    var params = param.split(',');
+    var intParams = [];
+    params.forEach(function (s) {
+        intParams.push(parseInt(s))
+    });
+    return intParams;
+};
+
+var hihghlightSamples = function(samples){
+    samples.forEach(function (s_id) {
+        var s = $( "#sample-"+s_id );
+        var currentWidth = s.width();
+
+        s.css("border", "2px solid #1f77b4")
+            .css("width", currentWidth*2);
+
+        // If the sample is collapsed open the group
+        isCollapsed = s.attr("data-collapsed-group");
+        if(isCollapsed!=undefined)
+            show_collapsed_samples_class_param(isCollapsed)
+    });
+
+    var s = $( "#sample-"+samples[0] );
+    var currentPositionX = s.position().left;
+    var pageCenterX = (window.innerWidth - window.innerWidth*0.2 )/2;
+    var leftPos = $('.frame').scrollLeft();
+    console.log('leftpos ' + leftPos);
+    $(".frame").animate({
+        scrollLeft: leftPos + currentPositionX - pageCenterX
+    }, 300);
 };
