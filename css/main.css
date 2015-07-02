@@ -27,6 +27,10 @@ div.title{
     cursor: pointer;
 }
 
+.cursor{
+    cursor: pointer;
+}
+
 div.report-header{
     border-top: solid 1px #D2D7D3;
     padding-left: 50px;
