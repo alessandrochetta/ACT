@@ -7,19 +7,18 @@
  * TODO aggiungere righe, aggiungere editabilità dei vecchi records
  */
 
-var labels = [
-    "BP",
-    "Pulse",
-    "Sats",
-    "Temp"
-];
-
 var previous_sample_hidden = false;
 var previous_sample_hidden_id = 0;
 var last_sample_id = 0;
 var number_of_samples = 0;
 
 var main = function(){
+
+    var paramHL = getUrlVars()["highlight"];
+
+    var paramsHL = parseParams(paramHL);
+
+    console.log("highlight " + paramsHL);
 
     $(".ui-block-a").css("height", window.innerHeight);
     $(".frame").css("height", window.innerHeight);
@@ -116,7 +115,10 @@ var main = function(){
      * Append new sample form
      */
     append_new_sample_form();
+    $('.header').on('click', function(){window.history.back()});
 
+    if(paramsHL.length>0)
+        hihghlightSamples(paramsHL)
 };
 
 var refresh = function(){
@@ -198,12 +200,19 @@ var show_collapsed_samples = function(collapsed_class){
         $( ".collapsed_samples_"+collapsed_class ).fadeOut();
 };
 
-
+var show_collapsed_samples_class_param = function(collapsed_class){
+    var display_mode = $( "." + collapsed_class ).css("display");
+    if(display_mode == "none")
+        $( "."+collapsed_class ).show();
+    else
+        $( "."+collapsed_class ).hide();
+};
 
 var append_new_sample = function(start, end, values, message, i){
 
     var sample_div = $(document.createElement('div'))
-        .addClass("sample");
+        .addClass("sample")
+        .attr("id", "sample-"+i);
 
     /*var shift_time_div = $(document.createElement('div'));
     shift_time_div.addClass("shift-time").html(start + " " + end);*/
@@ -321,6 +330,7 @@ var append_new_sample = function(start, end, values, message, i){
     {
 
         sample_div.addClass( 'collapsed_samples_' + previous_sample_hidden_id.toString());
+        sample_div.attr("data-collapsed-group", 'collapsed_samples_' + previous_sample_hidden_id.toString());
         sample_div.hide();
         if(!previous_sample_hidden){
             previous_sample_hidden = true;
@@ -596,4 +606,47 @@ var add_label = function(){
     var new_label = $("#new-field").val();
     labels.push(new_label);
     refresh();
+};
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+var parseParams = function(param){
+    if(param == undefined)
+        return [];
+    var params = param.split(',');
+    var intParams = [];
+    params.forEach(function (s) {
+        intParams.push(parseInt(s))
+    });
+    return intParams;
+};
+
+var hihghlightSamples = function(samples){
+    samples.forEach(function (s_id) {
+        var s = $( "#sample-"+s_id );
+        var currentWidth = s.width();
+
+        s.css("border", "2px solid #1f77b4")
+            .css("width", currentWidth*2);
+
+        // If the sample is collapsed open the group
+        isCollapsed = s.attr("data-collapsed-group");
+        if(isCollapsed!=undefined)
+            show_collapsed_samples_class_param(isCollapsed)
+    });
+
+    var s = $( "#sample-"+samples[0] );
+    var currentPositionX = s.position().left;
+    var pageCenterX = (window.innerWidth - window.innerWidth*0.2 )/2;
+    var leftPos = $('.frame').scrollLeft();
+    console.log('leftpos ' + leftPos);
+    $(".frame").animate({
+        scrollLeft: leftPos + currentPositionX - pageCenterX
+    }, 300);
 };

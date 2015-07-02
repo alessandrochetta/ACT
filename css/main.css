@@ -3,6 +3,17 @@ div.parameter-div{
     text-align:center;
 }
 
+div.header{
+    height: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    background: url("../../ML-report/img/arrow4132.svg") no-repeat left;
+    cursor: pointer;
+    border-bottom: #D2D7D3 1px solid;
+}
+
 div.frame{
     white-space: nowrap;
     overflow-y: scroll;
@@ -22,7 +33,6 @@ div.sample{
     padding-left: 5px;
     padding-right: 5px;
     vertical-align: top;
-    //border: solid black 1px;
 }
 
 textarea.nurse-text{
