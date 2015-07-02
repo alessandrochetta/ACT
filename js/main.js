@@ -18,6 +18,9 @@ var main = function(){
 
     var paramsHL = parseParams(paramHL);
 
+    var paramReportId = getUrlVars()["reportId"];
+    paramReportId = parseParams(paramReportId);
+
     console.log("highlight " + paramsHL);
 
     $(".ui-block-a").css("height", window.innerHeight);
@@ -115,7 +118,18 @@ var main = function(){
      * Append new sample form
      */
     append_new_sample_form();
-    $('.header').on('click', function(){window.history.back()});
+
+    console.log(paramReportId);
+    if(paramReportId.length>0)
+        $('.header').on('click', function(){
+            var previousURL = document.referrer.split('&')[0];
+            console.log(previousURL)
+            window.location.href = previousURL + '&reportId=' + paramReportId[0];
+        });
+    else
+        $('.header').on('click', function(){
+            window.history.back()
+        });
 
     if(paramsHL.length>0)
         hihghlightSamples(paramsHL)
