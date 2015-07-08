@@ -19,7 +19,7 @@ var start = function () {
     console.log('params: ' + params);
     params.forEach(function (clinicalEventIndex, reportId) {
         if(clinicalEventIndex<MLReports.length)
-            renderReport(MLReports[clinicalEventIndex], reportId);
+            renderReport(MLReports[clinicalEventIndex], reportId, clinicalEventIndex);
     });
 
     console.log(readCookie('reportId'));
@@ -31,7 +31,7 @@ var start = function () {
         openReportNoEffect('ce'+paramReportId[0])
 };
 
-var renderReport = function (MLReports, reportId) {
+var renderReport = function (MLReports, reportId, clinicalEventIndex) {
     var reportDiv = $(document.createElement('div')).attr("class", "report");
 
     // Report Header
@@ -125,7 +125,7 @@ var renderReport = function (MLReports, reportId) {
             .attr('class','cursor')
             .on('click', function (index) {
                 return function(){
-                    sampleRedirect(index, reportId)
+                    sampleRedirect(index, reportId, clinicalEventIndex)
                 }
             }(value.reportIndex, reportId));
         trs[0].append(datelTd);
@@ -134,7 +134,7 @@ var renderReport = function (MLReports, reportId) {
                 .attr('class','cursor')
                 .on('click', function (index) {
                     return function(){
-                        sampleRedirect(index, reportId)
+                        sampleRedirect(index, reportId, clinicalEventIndex)
                     }
                 }(value.reportIndex, reportId));
             if(value.classes[i] != null) {
@@ -178,7 +178,7 @@ var renderReport = function (MLReports, reportId) {
             .attr('class','cursor')
             .on('click', function (index) {
                 return function(){
-                    sampleRedirect(index, reportId)
+                    sampleRedirect(index, reportId, clinicalEventIndex)
                 }
             }(t.reportIndex, reportId));
         var text = samples[t.reportIndex].message;
@@ -254,8 +254,8 @@ var parseParams = function(param){
     return intParams;
 };
 
-var sampleRedirect = function (index, reportId) {
-    window.location.href = '../Nurse-shift-v2/index.html?highlight=' + index + '&reportId=' + reportId;
+var sampleRedirect = function (index, reportId, clinicalEventIndex) {
+    window.location.href = '../Nurse-shift-v2/index.html?highlight=' + index + '&reportId=' + reportId + '&clinicalEventIndex=' + clinicalEventIndex;
 };
 
 function readCookie(name) {
