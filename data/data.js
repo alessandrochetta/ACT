@@ -1487,15 +1487,15 @@ var MLReports = [
             "values": [
                 {
                     "reportIndex":0,
-                    "classes": [1, null, null, 4]
+                    "classes": [1, null, null, 3]
                 },
                 {
                     "reportIndex":4,
-                    "classes": [1, 2, null, 4]
+                    "classes": [1, 2, null, 3]
                 },
                 {
                     "reportIndex":5,
-                    "classes": [1, null, 3, 4]
+                    "classes": [1, null, 3, 3]
                 }
             ],
             "texts": [
@@ -1523,7 +1523,7 @@ var MLReports = [
                             "endCharacter": 77
                         },
                         {
-                            "class": 4,
+                            "class": 1,
                             "startCharacter": 100,
                             "endCharacter": 121
                         }
@@ -1538,7 +1538,7 @@ var MLReports = [
                             "endCharacter": 73
                         },
                         {
-                            "class": 4,
+                            "class": 2,
                             "startCharacter": 89,
                             "endCharacter": 95
                         }
