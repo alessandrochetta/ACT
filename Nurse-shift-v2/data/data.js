@@ -184,3 +184,8 @@ var clinicalEvents = [
     "Bronchopulmonary dysplasia",
     "Obliterative bronchiolitis"
 ];
+
+var intakeReport = {
+    "report": "General: ​Patient is a 72 year old male who is 5 days post op. from a right side total hip replacement with possible sepsis. Pt. (Patient) is fully developed and appears to be stated age. \nNeurological: P​t is acting appropriate for age. Patient is alert and oriented X4. Pupils are equal round and reactive to light with accommodation. \nCardiovascular: C​apillary refill in upper extremities were less than 3 seconds bilaterally at the beginning of the shift. Capillary refill is now greater than three seconds on upper extremities bilaterally. BP 79/54, pulse 120, O2 sats at 95a%. Patient experiencing sinus tachycardia. \nPulmonary: P​atient experiencing dyspnea upon exertion. Upper lobes clear bilaterally, lower lobes diminished bilaterally. Patient experiencing tachypnea with resp. of 26. \nGI/GU (Gastrointestinal/Genitourinary): P​atient voided once during shift. Stool was formed and brown. Foley catheter in place with output of 45ml/hr. Urine clear/yellow. \nPain: P​atient experiencing sharp pain in right hip at incision site. \nSkin/wounds: I​ncision site on right hip with purulent drainage. 2+ pitting edema of feet bilaterally.",
+    "time": "1:35am"
+};

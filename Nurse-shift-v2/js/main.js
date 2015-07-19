@@ -35,6 +35,11 @@ var main = function(){
     generate_left_bar();
 
     /**
+     * Generate intake form
+     */
+    append_intake_form();
+
+    /**
      * Append all the samples in the db
      */
     samples.forEach(function(s, i){
@@ -150,6 +155,12 @@ var refresh = function(){
     $(".frame").html("");
     $('#parameter-div').html("");
     generate_left_bar();
+
+    /**
+     * Generate intake form
+     */
+    append_intake_form();
+
     samples.forEach(function(s, i){
         append_new_sample(s.start, s.end, s.values, s.message, i);
         number_of_samples = i;
@@ -413,7 +424,9 @@ var append_new_sample = function(start, end, values, message, i){
     sample_div.append(button);
 
     var collapsed_samples_div_right = $(document.createElement('div')).addClass('collapsed_samples_bar_'+previous_sample_hidden_id.toString());
-    collapsed_samples_div_right.addClass('collapsed_samples_right');
+    collapsed_samples_div_right
+        .addClass('collapsed_samples_right')
+        .css("height", window.innerHeight*0.85);
 
     if(message == "")
     {
@@ -424,7 +437,9 @@ var append_new_sample = function(start, end, values, message, i){
         if(!previous_sample_hidden){
             previous_sample_hidden = true;
             var collapsed_samples_div_left = $(document.createElement('div')).addClass('collapsed_samples_bar_'+previous_sample_hidden_id.toString());
-            collapsed_samples_div_left.addClass('collapsed_samples_left');
+            collapsed_samples_div_left
+                .addClass('collapsed_samples_left')
+                .css("height", window.innerHeight*0.85);
 
 
             collapsed_samples_div_left.click((function(id){
@@ -601,6 +616,64 @@ var append_new_sample_form = function(){
     if(paramsHL.length == 0)
         scroll_right();
 };
+
+var append_intake_form = function(){
+
+    var sample_div = $(document.createElement('div'))
+        .addClass("intake-sample");
+        //.css("width", window.innerWidth*0.7);
+
+    var time_input_start = $(document.createElement('input'))
+        .attr("class", "input-field-shift")
+        .attr("id", "intake-report_time_start_edit")
+        .attr("value" , intakeReport.time)
+        .on("click", function(){
+            return show_edit_button("intake-report");
+        });
+
+    var intake_report = $(document.createElement('div'))
+        .attr("class", "input-field-shift-div")
+        .html("Intake report");
+
+    sample_div.append(intake_report);
+    sample_div.append(time_input_start);
+
+    var hr = $(document.createElement('hr'));
+    hr.addClass("horizontal-bar");
+
+    sample_div.append(hr);
+
+
+    var textarea_div = $(document.createElement('div'))
+        .attr("contenteditable", "true")
+        .addClass('intake-report-nurse-text-editable')
+        .attr("id", "intake-report-message")
+        .css("height", window.innerHeight*0.70)
+        .on("click", function(){
+            return show_edit_button("intake-report");
+
+        });
+
+    textarea_div.html(intakeReport.report);
+    sample_div.append(textarea_div);
+
+    var button = $(document.createElement('input'))
+        .attr("type", "submit")
+        .attr("value", "Edit")
+        .attr("class", "edit-button")
+        .attr("id", "intake-report-edit-button")
+        .hide()
+        .on("click", function(){
+            return edit_intake_report();
+
+        });
+
+    sample_div.append("<br>");
+    sample_div.append(button);
+    $(".frame").append(sample_div);
+
+};
+
 /*
 var add_sample = function () {
     var shift_time_start;
@@ -654,8 +727,16 @@ var add_sample = function () {
 };
 
 var show_edit_button = function(id){
+    console.log(id)
+    if(id == "intake-report" && $("#intake-report-edit-button").css("display") == "none"){
+        $(".edit-button").hide();
+        $("#intake-report-edit-button").fadeIn();
+    }
+
     if($("#edit-button-"+id).css("display") == "none")
     {
+        $("#intake-report-edit-button").hide();
+
         $(".edit-button").hide();
         $("#edit-button-"+id).fadeIn();
     }
@@ -688,6 +769,19 @@ var edit_report = function(id){
     //console.log(removeSpanTagsWhenEdit(message));
 
     refresh();
+};
+
+var edit_intake_report = function(){
+    $("#intake-report-edit-button").hide();
+    var time_start;
+    var message;
+
+    time_start = $("#intake-report_time_start_edit").val();
+
+    intakeReport.report  = $("#intake-report-message").html();
+
+    intakeReport.time = time_start;
+
 };
 
 var show_add_button = function(){

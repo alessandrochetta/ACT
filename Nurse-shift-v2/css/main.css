@@ -62,6 +62,17 @@ div.sample{
     vertical-align: top;
 }
 
+div.intake-sample{
+    display:inline-block;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    width: 400px;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: top;
+}
+
 .nurse-text{
     box-shadow : none;
     resize: none;
@@ -90,6 +101,18 @@ div.sample{
 .nurse-text-editable{
     white-space: pre-wrap;
     max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.intake-report-nurse-text-editable{
+    white-space: pre-wrap;
+    height: 700px;
+    max-height: 800px;
     overflow-y: auto;
     overflow-x: hidden;
     border: none;
@@ -157,6 +180,18 @@ div.sample{
     height: 20px;
     padding: 0;
 }
+
+.input-field-shift-div{
+    float: left;
+    text-align:center;
+    width: 50%;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    height: 20px;
+    padding: 0;
+}
+
 
 div.sample-label{
     background-color: white;
