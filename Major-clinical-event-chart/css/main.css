@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 text{
@@ -8,5 +10,16 @@ text{
 }
 
 .bar{
+    cursor: pointer;
+}
+
+div.header{
+    height: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    background: url("../../ML-report/img/arrow4132.svg") no-repeat left;
+    border-bottom: solid 1px #D2D7D3;
     cursor: pointer;
 }

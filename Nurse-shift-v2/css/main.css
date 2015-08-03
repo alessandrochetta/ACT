@@ -111,8 +111,8 @@ div.intake-sample{
 
 .intake-report-nurse-text-editable{
     white-space: pre-wrap;
-    height: 700px;
-    max-height: 800px;
+    height: 850px;
+    max-height: 900px;
     overflow-y: auto;
     overflow-x: hidden;
     border: none;

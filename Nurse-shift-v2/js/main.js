@@ -319,14 +319,17 @@ var append_new_sample = function(start, end, values, message, i){
             }(i));
 
         if(reportData != undefined && showClinicalEvent){
-            if(reportData.values.classes[j] != null && v != null && v!= "")
-            {
-                var textColor = color(reportData.values.classes[j]);
-                console.log(v + " class:" + reportData.values.classes[j])
-                if(!classInClinicalEventRecognizedRelatedToTheSample(reportData.values.classes[j]))
-                    clinicalEventRecognizedRelatedToTheSample.push(reportData.values.classes[j]);
-                input.css("color", textColor)
+            if(reportData.values != undefined){
+                if(reportData.values.classes[j] != null && v != null && v!= "")
+                {
+                    var textColor = color(reportData.values.classes[j]);
+                    console.log(v + " class:" + reportData.values.classes[j])
+                    if(!classInClinicalEventRecognizedRelatedToTheSample(reportData.values.classes[j]))
+                        clinicalEventRecognizedRelatedToTheSample.push(reportData.values.classes[j]);
+                    input.css("color", textColor)
+                }
             }
+
         }
 
         sample_label_div.append(input);
@@ -363,7 +366,7 @@ var append_new_sample = function(start, end, values, message, i){
     /*var textarea_div = $(document.createElement('textarea_div'))
         .addClass('nurse-text-editable')
         .attr("id", "message-"+i)
-        .css("height", window.innerHeight*0.35)
+        .css("height", w.innerHeight*0.35windo)
         .html(message)
         .on("click", function(){
             return function(){
@@ -386,20 +389,25 @@ var append_new_sample = function(start, end, values, message, i){
 
     if(reportData != undefined && showClinicalEvent){
         var ind = 0;
-        reportData.text.classes.forEach(function (c) {
-            for(; ind < c.startCharacter; ind++)
+
+        if( reportData.text != undefined) {
+            reportData.text.classes.forEach(function (c) {
+                for (; ind < c.startCharacter; ind++)
+                    textarea_div.append(message[ind])
+                var span = $(document.createElement('span'))
+                    .css("color", color(c.class));
+                if (!classInClinicalEventRecognizedRelatedToTheSample(c.class))
+                    clinicalEventRecognizedRelatedToTheSample.push(c.class);
+                for (var j = ind; j <= c.endCharacter; j++)
+                    span.append(message[j])
+                textarea_div.append(span);
+                ind = j
+            });
+            for (; ind < message.length; ind++)
                 textarea_div.append(message[ind])
-            var span = $(document.createElement('span'))
-                .css("color", color(c.class));
-            if(!classInClinicalEventRecognizedRelatedToTheSample(c.class))
-                clinicalEventRecognizedRelatedToTheSample.push(c.class);
-            for(var j=ind; j <= c.endCharacter; j++)
-                span.append(message[j])
-            textarea_div.append(span);
-            ind = j
-        });
-        for(; ind < message.length; ind++)
-            textarea_div.append(message[ind])
+        }else{
+            textarea_div.html(message)
+        }
     }
     else{
         textarea_div.html(message)
@@ -430,7 +438,6 @@ var append_new_sample = function(start, end, values, message, i){
 
     if(message == "")
     {
-
         sample_div.addClass( 'collapsed_samples_' + previous_sample_hidden_id.toString());
         sample_div.attr("data-collapsed-group", 'collapsed_samples_' + previous_sample_hidden_id.toString());
         sample_div.hide();
@@ -648,7 +655,7 @@ var append_intake_form = function(){
         .attr("contenteditable", "true")
         .addClass('intake-report-nurse-text-editable')
         .attr("id", "intake-report-message")
-        .css("height", window.innerHeight*0.70)
+        .css("height", window.innerHeight*0.80)
         .on("click", function(){
             return show_edit_button("intake-report");
 
@@ -839,7 +846,6 @@ var hihghlightSamples = function(samples){
     }, 300);
 };
 
-
 var findReportDataRelatedToSample = function(repId, sampleId){
     var reportData = MLReports[repId];
     var values = undefined;
@@ -926,6 +932,7 @@ var printClinicalEventInformation = function(reportId, sampleId){
 };
 
 var removeClinicalEventInformation = function(sampleId){
+
     showClinicalEvent = false;
     $('.clinicalEvent-'+sampleId).remove();
     $('#header-right').html("");
@@ -935,7 +942,17 @@ var removeClinicalEventInformation = function(sampleId){
     var s = $( "#sample-"+sampleId );
     var currentWidth = s.width();
     s.css("width", currentWidth/2);
-    $("#hide-information-button").fadeOut();
+    var button = $("#hide-information-button");
+    button.val("Show clinical event");
+    button.on("click", function () {
+        return showClinicalEventInformation();
+    })
+
+};
+
+var showClinicalEventInformation = function(){
+    showClinicalEvent = true;
+    refresh();
 };
 
 var classInClinicalEventRecognizedRelatedToTheSample = function(c){

@@ -12,7 +12,9 @@ $(function() {
         data = data_array[i];
         start();
     }
-
+    $('.header').on('click', function(){
+        window.location.href = '../index.html';
+    });
 });
 
 var random_data = function () {

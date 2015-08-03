@@ -148,11 +148,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -203,7 +203,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -211,7 +211,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -225,11 +225,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -280,7 +280,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -288,7 +288,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -302,23 +302,23 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 }
             ],
             "values": [
@@ -350,7 +350,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -358,15 +358,15 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": 3,
-                    "string": "Evidence of event3."
+                    "string": "Evidence of symptom3."
                 },
                 {
                     "class": 4,
-                    "string": "Evidence of event4."
+                    "string": "Evidence of symptom4."
                 },
                 {
                     "class": null,
@@ -374,7 +374,7 @@ var MLReports = [
                 },
                 {
                     "class": 5,
-                    "string": "Evidence of event5."
+                    "string": "Evidence of symptom5."
                 }
             ]
         },
@@ -384,23 +384,23 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 }
             ],
             "values": [
@@ -432,7 +432,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -440,15 +440,15 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": 3,
-                    "string": "Evidence of event3."
+                    "string": "Evidence of symptom3."
                 },
                 {
                     "class": 4,
-                    "string": "Evidence of event4."
+                    "string": "Evidence of symptom4."
                 },
                 {
                     "class": null,
@@ -456,7 +456,7 @@ var MLReports = [
                 },
                 {
                     "class": 5,
-                    "string": "Evidence of event5."
+                    "string": "Evidence of symptom5."
                 }
             ]
         },
@@ -466,11 +466,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -493,7 +493,7 @@ var MLReports = [
             "text": [
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -513,7 +513,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 }
             ]
         },
@@ -523,11 +523,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -550,7 +550,7 @@ var MLReports = [
             "text": [
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -570,7 +570,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 }
             ]
         },
@@ -580,31 +580,31 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 },
                 {
                     "class": 6,
-                    "name": "event6"
+                    "name": "symptom6"
                 },
                 {
                     "class": 7,
-                    "name": "event7"
+                    "name": "symptom7"
                 }
             ],
             "values": [
@@ -676,7 +676,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -684,7 +684,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -692,7 +692,7 @@ var MLReports = [
                 },
                 {
                     "class": 3,
-                    "string": "Evidence of event3."
+                    "string": "Evidence of symptom3."
                 },
                 {
                     "class": null,
@@ -700,7 +700,7 @@ var MLReports = [
                 },
                 {
                     "class": 4,
-                    "string": "Evidence of event4."
+                    "string": "Evidence of symptom4."
                 },
                 {
                     "class": null,
@@ -708,11 +708,11 @@ var MLReports = [
                 },
                 {
                     "class": 5,
-                    "string": "Evidence of event5. "
+                    "string": "Evidence of symptom5. "
                 },
                 {
                     "class": 6,
-                    "string": "Evidence of event6."
+                    "string": "Evidence of symptom6."
                 },
                 {
                     "class": null,
@@ -720,7 +720,7 @@ var MLReports = [
                 },
                 {
                     "class": 7,
-                    "string": "Evidence of event7."
+                    "string": "Evidence of symptom7."
                 }
             ]
         },
@@ -730,31 +730,31 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 },
                 {
                     "class": 6,
-                    "name": "event6"
+                    "name": "symptom6"
                 },
                 {
                     "class": 7,
-                    "name": "event7"
+                    "name": "symptom7"
                 }
             ],
             "values": [
@@ -826,7 +826,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -834,7 +834,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -842,7 +842,7 @@ var MLReports = [
                 },
                 {
                     "class": 3,
-                    "string": "Evidence of event3."
+                    "string": "Evidence of symptom3."
                 },
                 {
                     "class": null,
@@ -850,7 +850,7 @@ var MLReports = [
                 },
                 {
                     "class": 4,
-                    "string": "Evidence of event4."
+                    "string": "Evidence of symptom4."
                 },
                 {
                     "class": null,
@@ -858,11 +858,11 @@ var MLReports = [
                 },
                 {
                     "class": 5,
-                    "string": "Evidence of event5. "
+                    "string": "Evidence of symptom5. "
                 },
                 {
                     "class": 6,
-                    "string": "Evidence of event6."
+                    "string": "Evidence of symptom6."
                 },
                 {
                     "class": null,
@@ -870,7 +870,7 @@ var MLReports = [
                 },
                 {
                     "class": 7,
-                    "string": "Evidence of event7."
+                    "string": "Evidence of symptom7."
                 }
             ]
         },
@@ -880,11 +880,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -916,7 +916,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -928,7 +928,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -942,11 +942,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -978,7 +978,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -990,7 +990,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -1004,15 +1004,15 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 }
             ],
             "values": [
@@ -1049,7 +1049,7 @@ var MLReports = [
                 },
                 {
                     "class": 3,
-                    "string": "Evidence of event3."
+                    "string": "Evidence of symptom3."
                 },
                 {
                     "class": null,
@@ -1057,7 +1057,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -1065,7 +1065,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -1079,15 +1079,15 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 }
             ],
             "values": [
@@ -1124,7 +1124,7 @@ var MLReports = [
                 },
                 {
                     "class": 3,
-                    "string": "Evidence of event3."
+                    "string": "Evidence of symptom3."
                 },
                 {
                     "class": null,
@@ -1132,7 +1132,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -1140,7 +1140,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -1154,11 +1154,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -1190,7 +1190,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -1202,7 +1202,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -1216,11 +1216,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -1252,7 +1252,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 },
                 {
                     "class": null,
@@ -1264,7 +1264,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 },
                 {
                     "class": null,
@@ -1278,7 +1278,7 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 }
             ],
             "values": [
@@ -1295,7 +1295,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 }
             ]
         },
@@ -1305,7 +1305,7 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 }
             ],
             "values": [
@@ -1322,7 +1322,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 }
             ]
         },
@@ -1332,11 +1332,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -1363,7 +1363,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 }
             ]
         },
@@ -1373,11 +1373,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -1404,7 +1404,7 @@ var MLReports = [
                 },
                 {
                     "class": 2,
-                    "string": "Evidence of event2."
+                    "string": "Evidence of symptom2."
                 }
             ]
         },
@@ -1414,7 +1414,7 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 }
             ],
             "values": [
@@ -1431,7 +1431,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 }
             ]
         },
@@ -1441,7 +1441,7 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 }
             ],
             "values": [
@@ -1458,7 +1458,7 @@ var MLReports = [
                 },
                 {
                     "class": 1,
-                    "string": "Evidence of event1."
+                    "string": "Evidence of symptom1."
                 }
             ]
         }
@@ -1466,7 +1466,6 @@ var MLReports = [
 ;*/
 
 var MLReports = [
-
         {
             "clinicalEventIndex": 0,
             "probability": 32,
@@ -1552,19 +1551,19 @@ var MLReports = [
             "causes":[
                 {
                     "class": 2,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 3,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 1,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 }
             ],
             "values": [
@@ -1635,19 +1634,19 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 }
             ],
             "values": [
@@ -1723,19 +1722,19 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 }
             ],
             "values": [
@@ -1811,23 +1810,23 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 4,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 3,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 }
             ],
             "values": [
@@ -1923,23 +1922,23 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 4,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 3,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 }
             ],
             "values": [
@@ -2035,11 +2034,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -2081,11 +2080,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -2127,11 +2126,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -2188,11 +2187,11 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 }
             ],
             "values": [
@@ -2249,27 +2248,27 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 },
                 {
                     "class": 6,
-                    "name": "event6"
+                    "name": "symptom6"
                 }
             ],
             "values": [
@@ -2371,27 +2370,27 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 },
                 {
                     "class": 6,
-                    "name": "event6"
+                    "name": "symptom6"
                 }
             ],
             "values": [
@@ -2493,27 +2492,27 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 },
                 {
                     "class": 6,
-                    "name": "event6"
+                    "name": "symptom6"
                 }
             ],
             "values": [
@@ -2615,27 +2614,27 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 },
                 {
                     "class": 5,
-                    "name": "event5"
+                    "name": "symptom5"
                 },
                 {
                     "class": 6,
-                    "name": "event6"
+                    "name": "symptom6"
                 }
             ],
             "values": [
@@ -2737,19 +2736,19 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 }
             ],
             "values": [
@@ -2806,19 +2805,19 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 }
             ],
             "values": [
@@ -3015,15 +3014,15 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 }
             ],
             "values": [
@@ -3099,15 +3098,15 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 }
             ],
             "values": [
@@ -3183,19 +3182,19 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "symptom1"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
+                    "name": "symptom2"
                 },
                 {
                     "class": 3,
-                    "name": "event3"
+                    "name": "symptom3"
                 },
                 {
                     "class": 4,
-                    "name": "event4"
+                    "name": "symptom4"
                 }
             ],
             "values": [
@@ -3271,33 +3270,25 @@ var MLReports = [
             "causes":[
                 {
                     "class": 1,
-                    "name": "event1"
+                    "name": "elevated temperature"
                 },
                 {
                     "class": 2,
-                    "name": "event2"
-                },
-                {
-                    "class": 3,
-                    "name": "event3"
-                },
-                {
-                    "class": 4,
-                    "name": "event4"
+                    "name": "stomached"
                 }
             ],
             "values": [
                 {
                     "reportIndex":5,
-                    "classes": [4, 2, 1, 3]
+                    "classes": [null, null, null, null]
                 },
                 {
                     "reportIndex":6,
-                    "classes": [4, 2, 1, 3]
+                    "classes": [null, null, null, null]
                 },
                 {
                     "reportIndex":8,
-                    "classes": [4, 2, 1, 3]
+                    "classes": [null, null, null, 1]
                 }
             ],
             "texts": [
@@ -3305,53 +3296,273 @@ var MLReports = [
                     "reportIndex":0,
                     "classes": [
                         {
-                            "class": 4,
-                            "startCharacter": 8,
-                            "endCharacter": 22
-                        },
-                        {
-                            "class": 1,
-                            "startCharacter": 25,
-                            "endCharacter": 66
+                            "class": 2,
+                            "startCharacter": 126,
+                            "endCharacter": 146
                         }
                     ]
+                }
+                ]
+            }
+        ];
+/*
+
+var MLReports = [
+
+        {
+            "clinicalEventIndex": 0,
+            "probability": 89,
+            "causes":[
+                {
+                    "class": 1,
+                    "name": "unpleasant urination"
+                },
+                {
+                    "class": 2,
+                    "name": "abdominal pain"
+                },
+                {
+                    "class": 3,
+                    "name": "cloudy urine"
+                },
+                {
+                    "class": 4,
+                    "name": "elevated temperature"
+                },
+                {
+                    "class": 5,
+                    "name": "low blood pressure"
+                },
+                {
+                    "class": 6,
+                    "name": "elevated respiration"
+                },
+                {
+                    "class": 7,
+                    "name": "elevated heart rate"
+                }
+            ],
+            "values": [
+                {
+                    "reportIndex":0,
+                    "classes": [null, null, null, null, null, 2]
+                },
+                {
+                    "reportIndex":1,
+                    "classes": [null, null, null, null, null, null]
+                },
+                {
+                    "reportIndex":2,
+                    "classes": [null, null, null, 4, null, null]
+                },
+                {
+                    "reportIndex":3,
+                    "classes": [5, null, null, 4, null, null]
+                },
+                {
+                    "reportIndex":4,
+                    "classes": [5, null, null, 4, null, null]
+                },
+                {
+                    "reportIndex":5,
+                    "classes": [5, 7, null, 4, 6, 2]
                 },
                 {
                     "reportIndex":6,
+                    "classes": [5, 7, null, 4, 6, null]
+                },
+                {
+                    "reportIndex":7,
+                    "classes": [5, 7, null, 4, 6, 2]
+                }
+            ],
+            "texts": [
+                {
+                    "reportIndex":0,
                     "classes": [
                         {
-                            "class": 3,
-                            "startCharacter": 63,
-                            "endCharacter": 84
-                        },
-                        {
-                            "class": 4,
-                            "startCharacter": 98,
-                            "endCharacter": 126
+
+                            "class": 2,
+                            "startCharacter":24,
+                            "endCharacter": 37
+
                         }
                     ]
                 },
                 {
-                    "reportIndex":8,
+                    "reportIndex":5,
                     "classes": [
                         {
-                            "class": 3,
-                            "startCharacter": 0,
-                            "endCharacter": 5
-                        },
-                        {
-                            "class": 1,
-                            "startCharacter": 25,
-                            "endCharacter": 62
-                        },
-                        {
+
                             "class": 2,
-                            "startCharacter": 87,
-                            "endCharacter": 92
+                            "startCharacter":22,
+                            "endCharacter": 36
+
+                        },
+                        {
+
+                            "class": 4,
+                            "startCharacter":72,
+                            "endCharacter": 107
+
+                        }
+                    ]
+                },
+                {
+                    "reportIndex":7,
+                    "classes": [
+                        {
+
+                            "class": 5,
+                            "startCharacter":15,
+                            "endCharacter": 19
+
+                        },
+                        {
+
+                            "class": 5,
+                            "startCharacter":34,
+                            "endCharacter": 49
+
+                        },
+                        {
+
+                            "class": 6,
+                            "startCharacter":67,
+                            "endCharacter": 93
+
                         }
                     ]
                 }
             ]
-        }
-    ]
-    ;
+        },
+    {
+        "clinicalEventIndex": 1,
+        "probability": 22,
+        "causes":[
+            {
+                "class": 1,
+                "name": "unpleasant urination"
+            },
+            {
+                "class": 2,
+                "name": "abdominal pain"
+            },
+            {
+                "class": 3,
+                "name": "cloudy urine"
+            },
+            {
+                "class": 4,
+                "name": "elevated temperature"
+            },
+            {
+                "class": 5,
+                "name": "low blood pressure"
+            },
+            {
+                "class": 6,
+                "name": "elevated respiration"
+            },
+            {
+                "class": 7,
+                "name": "elevated heart rate"
+            }
+        ],
+        "values": [
+            {
+                "reportIndex":0,
+                "classes": [null, null, null, null, null, 2]
+            },
+            {
+                "reportIndex":1,
+                "classes": [null, null, null, null, null, null]
+            },
+            {
+                "reportIndex":2,
+                "classes": [null, null, null, 4, null, null]
+            },
+            {
+                "reportIndex":3,
+                "classes": [5, null, null, 4, null, null]
+            },
+            {
+                "reportIndex":4,
+                "classes": [5, null, null, 4, null, null]
+            },
+            {
+                "reportIndex":5,
+                "classes": [5, 7, null, 4, 6, 2]
+            },
+            {
+                "reportIndex":6,
+                "classes": [5, 7, null, 4, 6, null]
+            },
+            {
+                "reportIndex":7,
+                "classes": [5, 7, null, 4, 6, 2]
+            }
+        ],
+        "texts": [
+            {
+                "reportIndex":0,
+                "classes": [
+                    {
+
+                        "class": 2,
+                        "startCharacter":24,
+                        "endCharacter": 37
+
+                    }
+                ]
+            },
+            {
+                "reportIndex":5,
+                "classes": [
+                    {
+
+                        "class": 2,
+                        "startCharacter":22,
+                        "endCharacter": 36
+
+                    },
+                    {
+
+                        "class": 4,
+                        "startCharacter":78,
+                        "endCharacter": 108
+
+                    }
+
+                ]
+            },
+            {
+                "reportIndex":7,
+                "classes": [
+                    {
+
+                        "class": 5,
+                        "startCharacter":15,
+                        "endCharacter": 19
+
+                    },
+                    {
+
+                        "class": 5,
+                        "startCharacter":34,
+                        "endCharacter": 49
+
+                    },
+                    {
+
+                        "class": 6,
+                        "startCharacter":67,
+                        "endCharacter": 93
+
+                    }
+                ]
+            }
+        ]
+    }];
+
+*/

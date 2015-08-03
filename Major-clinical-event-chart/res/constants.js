@@ -18,5 +18,5 @@ style.graph = {
 };
 
 var color = d3.scale.linear()
-    .domain([0, 100])
-    .range(["#27ae60", "#d35400", "#c0392b"]);
+    .domain([0, 55])
+    .range(["#27ae60", "#c0392b"]);
