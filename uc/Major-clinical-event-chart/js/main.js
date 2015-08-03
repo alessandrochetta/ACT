@@ -13,7 +13,7 @@ $(function() {
         start();
     }
     $('.header').on('click', function(){
-        window.history.back()
+        window.location.href = 'http://alessandrochetta.github.io/ACT/';
     });
 });
 
