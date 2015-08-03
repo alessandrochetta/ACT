@@ -81,8 +81,8 @@ var samples =[
         }
 
 ];
-*/
 
+*/
 
 
 var samples =[
@@ -135,10 +135,10 @@ var samples =[
         "message": "The patient is pale and her blood pressure is low. The patient has problem in the respiration."
     }
 ];
-
-
-
 /*
+
+
+
  var labels = [
  "BP",
  "Pulse",
