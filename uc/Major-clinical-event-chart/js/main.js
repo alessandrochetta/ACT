@@ -13,7 +13,7 @@ $(function() {
         start();
     }
     $('.header').on('click', function(){
-        window.location.href = '../ACT/';
+        window.location.href = '../../';
     });
 });
 
