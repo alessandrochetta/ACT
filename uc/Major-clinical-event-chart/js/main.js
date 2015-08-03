@@ -13,7 +13,7 @@ $(function() {
         start();
     }
     $('.header').on('click', function(){
-        window.location.href = '../Major-clinical-event-chart/index.html';
+        window.location.href = '../index.html';
     });
 });
 
