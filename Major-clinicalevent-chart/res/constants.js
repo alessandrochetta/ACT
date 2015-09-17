@@ -19,4 +19,4 @@ style.graph = {
 
 var color = d3.scale.linear()
     .domain([0, 55])
-    .range(["#27ae60", "#c0392b"]);
+    .range(["#699bfc", "#ca0814"]);
