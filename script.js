@@ -5,7 +5,7 @@ $(function() {
 var start = function(){
 
 
-	$(".title").css("height", window.innerHeight*0.4);
+	$(".title").css("height", window.innerHeight*0.35);
     $("#demo")
         .delay(100)
         .fadeIn()
@@ -18,5 +18,12 @@ var start = function(){
         .fadeIn()
         .on("click", function () {
             return window.location.href = "uc/Major-clinical-event-chart/";
+        });
+
+    $("#timeline")
+        .delay(1300)
+        .fadeIn()
+        .on("click", function () {
+            return window.location.href = "Nurse-shift-v2/";
         });
 };
