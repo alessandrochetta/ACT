@@ -102,19 +102,19 @@ var samples =[
         "start":"2:00am",
         "end":"2:10am",
         "values":["115/79", "70", "98", "99.0", "15", "2/10"],
-        "message": "patient woke up"
+        "message": "P​atient voided once during shift. Stool was formed and brown."
     },
     {
         "start":"3:00am",
         "end":"3:10am",
         "values":["100/70", "80", "97", "99.5", "16", "3/10"],
-        "message": "The patient ate."
+        "message": "P​atient experiencing dyspnea upon exertion. Upper lobes clear bilaterally, lower lobes diminished bilaterally. Patient experiencing tachypnea."
     },
     {
         "start":"4:00am",
         "end":"4:10am",
         "values":["90/69", "96", "97", "99.9", "18", "3/10"],
-        "message": "The patient used the bathroom."
+        "message": "C​apillary refill in upper extremities were less than 3 seconds bilaterally at the beginning of the shift."
     },
     {
         "start":"5:00am",
