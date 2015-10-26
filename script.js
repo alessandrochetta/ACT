@@ -7,7 +7,6 @@ var start = function(){
 
 	$(".title").css("height", window.innerHeight*0.27);
     $("#demo")
-        .delay(100)
         .fadeIn()
         .on("click", function () {
             return window.location.href = "Major-clinical-event-chart/";
