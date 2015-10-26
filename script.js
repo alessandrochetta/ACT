@@ -6,7 +6,7 @@ $( document ).ready(function() {
 var start = function(){
 
 
-	$(".title").css("height", window.innerHeight*0.27);
+	$("#container").css("margin-top", window.innerHeight*0.25);
     $("#demo")
         .fadeIn()
         .on("click", function () {
